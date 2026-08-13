@@ -1,0 +1,34 @@
+#Site settings
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+markdown: kramdown
+
+title: Always Free Résumé Builder
+description: >-
+  blah blah
+
+#temporary until I get the subdomain configured
+baseurl: "/alwaysfreeresume.com"
+url: "https://heirofnorton.github.io"
+
+# defaults:
+#  -
+#    scope:
+#      path: ""
+#        values:
+#        layout: default
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - oldpages/
