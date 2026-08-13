@@ -10,9 +10,9 @@ title: Always Free Résumé Builder
 description: >-
   blah blah
 
-#temporary until I get the subdomain configured
-baseurl: "/alwaysfreeresume.com"
-url: "https://heirofnorton.github.io"
+#temporary until I get it complete
+baseurl: ""
+url: "https://dev.alwaysfreeresume.com"
 
 # defaults:
 #  -
