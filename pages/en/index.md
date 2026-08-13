@@ -4,5 +4,3 @@ permalink: '/'
 basepage: '/'
 lang: en
 ---
-
-<p>Starter.</p>
