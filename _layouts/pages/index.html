@@ -8,13 +8,6 @@ layout: default
     {{ site.data[page.lang].string }}
 </p>
 
-{% for pg in site.pages %}
-{% if pg.lang == page.lang %}
-{% if pg.basepage == "about" %}
-<p>
-    URL: {{ pg.url }}<br>
-    Permalink: {{ pg.permalink }} 
+{% assign aboutpage = site.pages | where:"basepage","about" | where_exp:"pg","pg.lang == page.lang" | size %}
 
-{% endif %}
-{% endif %}
-{% endfor %}
+{{ aboutpage }}
