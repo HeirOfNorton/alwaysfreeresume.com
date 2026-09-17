@@ -8,7 +8,7 @@ layout: default
     {{ site.data[page.lang].string }}
 </p>
 
-{% assign aboutpage = site.pages | where:"basepage","about" | where_exp:"pg","pg.lang == page.lang" | first %}
+{% assign aboutpage = site.pages | where_exp:"pg","pg.basepage == 'about'" | where_exp:"pg","pg.lang == page.lang" | first %}
 
 <p>
     URL: {{ aboutpage.permalink }}
