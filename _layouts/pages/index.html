@@ -9,5 +9,5 @@ layout: default
 </p>
 
 <p>
-    {% link pages/en/about.md %}
+    {{ site.base_url }}{% link {{ "pages/" | append: page.lang | append: "/about.md" }} %}
 </p>
