@@ -8,6 +8,9 @@ layout: default
     {{ site.data[page.lang].string }}
 </p>
 
+{% capture pagelink %}pages/{{ page.lang }}/about.md{% endcapture %}
+
 <p>
-    {{ site.base_url }}{% link {{ "pages/" | append: page.lang | append: "/about.md" }} %}
+    File: {{ pagelink }}<br>
+    URL: {{ site.base_url }}{% link {{ pagelink }} %}
 </p>
