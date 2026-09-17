@@ -1,0 +1,1 @@
+{% assign returnpage = site.pages | where:"basepage",include.page | where_exp:"pg","pg.lang == page.lang" | first %}{{ returnpage }}

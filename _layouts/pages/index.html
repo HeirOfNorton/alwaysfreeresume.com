@@ -9,5 +9,10 @@ layout: default
 </p>
 
 {% assign aboutpage = site.pages | where:"basepage","about" | where_exp:"pg","pg.lang == page.lang" | first %}
-
 {{ aboutpage.url }}
+
+<p>
+    Inclusion!
+</p>
+
+{% include url page="about" %}
