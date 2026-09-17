@@ -9,15 +9,12 @@ layout: default
 </p>
 
 {% for pg in site.pages %}
-<p>Found a page.</p>
-{% if pg.basepage == "about" %}
 {% if pg.lang == page.lang %}
+{% if pg.basepage == "about" %}
 <p>
     URL: {{ pg.url }}<br>
-    Permalink: {{ pg.permalink }}
-</p>
-{% else %}
-<p>Found "About", but no matching "Lang".</p>
+    Permalink: {{ pg.permalink }} 
+
 {% endif %}
 {% endif %}
 {% endfor %}
