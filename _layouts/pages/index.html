@@ -8,8 +8,15 @@ layout: default
     {{ site.data[page.lang].string }}
 </p>
 
-{% assign aboutpage = site.pages | where_exp:"pg","pg.basepage == 'about'" | where_exp:"pg","pg.lang == page.lang" | first %}
-
+{% for pg in site.pages %}
+{% if pg.basename == "about" %}
+{% if pg.lang == page.lang %}
 <p>
-    URL: {{ aboutpage.url }}
+    URL: {{ pg.url }}<br>
+    Permalink: {{ pg.permalink }}
 </p>
+{% else %}
+<p>Found "About", but no matching "Lang".</p>
+{% endif %}
+{% endif %}
+{% endfor %}
