@@ -1,6 +1,6 @@
 ---
 layout: pages/index
 permalink: '/'
-basepage: '/'
+basepage: index
 lang: en
 ---
