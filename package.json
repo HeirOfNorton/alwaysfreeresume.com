@@ -1,0 +1,24 @@
+{
+  "name": "alwaysfreeresume.com",
+  "version": "1.0.0",
+  "description": "Web app for a free resume builder.",
+  "homepage": "https://alwaysfreeresume.com",
+  "bugs": {
+    "url": "https://github.com/HeirOfNorton/alwaysfreeresume.com/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeirOfNorton/alwaysfreeresume.com.git"
+  },
+  "license": "MIT",
+  "author": "Jason Seeley",
+  "type": "module",
+  "main": "index.html",
+  "scripts": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.7",
+    "alpinejs": "^3.17.4",
+    "bulma": "^1.0.4",
+    "sass-embedded": "^1.105.2"
+  }
+}
