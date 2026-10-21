@@ -1,3 +1,4 @@
+/** @type {import('@11ty/eleventy').UserConfig} */
 
 import YAML from "yaml";
 
