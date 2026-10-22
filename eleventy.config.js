@@ -3,7 +3,7 @@
 import path from "node:path"
 import YAML from "yaml"
 import * as esbuild from "esbuild"
-import * as sass from "sass-embedded"
+import * as sass from "sass"
 
 export const config = {
     //static config
