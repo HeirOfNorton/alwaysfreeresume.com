@@ -1,2 +1,2 @@
 lang: en
-permalink: '/{{ title | slugify }}/'
+permalink: "/{{ title | slugify }}/"
