@@ -1,5 +1,3 @@
-/** @type {import('@11ty/eleventy').UserConfig} */
-
 import path from "node:path"
 import YAML from "yaml"
 import * as esbuild from "esbuild"
@@ -11,6 +9,7 @@ export const config = {
     //templateFormats: ["html","njk","js","scss"],
 }
 
+/** @param {import('@11ty/eleventy/UserConfig').default} eleventyConfig */
 export default async function(eleventyConfig) {
     //config
     eleventyConfig.addDataExtension("yaml", (contents) => YAML.parse(contents))
