@@ -1,0 +1,18 @@
+---
+layout: default.njk
+prev: index
+next: index
+---
+
+{% set backurl = "/pages/" + lang + "/" + prev + ".njk" %}
+{% set nexturl = "/pages/" + lang + "/" + next + ".nkj" %}
+
+<div>
+    <a href="{{ backurl | inputPathToUrl }}">Go Back</a>
+</div>
+
+{{ content | safe }}
+
+<div>
+    <a href="{{ nexturl | inputPathToUrl }}">Continue</a>
+</div>

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="{{ lang }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="color-scheme" content="light dark">
+
+        {# Put extra SEO and social card stuff here #}
+
+        <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+        <link rel="stylesheet" href="{{ "/css/styles.scss" | inputPathToUrl }}">
+        {% if css -%}
+            <link rel="stylesheet" href="{{ css | inputPathToUrl }}">
+        {%- endif %}
+
+        <script defer type="module" src="{{ "/js/app.js" | inputPathToUrl }}"></script>
+        <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
+    </head>
+    <body>
+        {{ content | safe }}
+    </body>
+</html>
