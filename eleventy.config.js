@@ -26,9 +26,9 @@ export default async function(eleventyConfig) {
             return data.lang
         }
     })
-    eleventyConfig.addFilter("langlink", function(link) {
+    eleventyConfig.addFilter("langlink", function(link, overrideLang) {
         const prefix = "/pages/"
-        const lang = this.page.lang
+        const lang = overrideLang || this.page.lang || "en"
         const midfix = "/"
         const postfix = ".njk"
 
