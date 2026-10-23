@@ -18,6 +18,20 @@ export default async function(eleventyConfig) {
     eleventyConfig.addTemplateFormats('js')
     eleventyConfig.addTemplateFormats('scss')
 
+    eleventyConfig.addGlobalData("eleventyComputed.page.lang" () => {
+        return (data) => {
+            return data.lang
+        }
+    })
+    eleventyConfig.addFilter("langlink", function(link) {
+        const prefix = "/pages/"
+        const lang = this.page.lang
+        const midfix = "/"
+        const postfix = ".njk"
+
+        return prefix + lang + midfix + link + postfix
+    })
+
     eleventyConfig.addExtension('js', {
         outputFileExtension: 'js',
         compile: async (inputContent, inputPath) => {
