@@ -6,8 +6,11 @@ import { RenderPlugin } from "@11ty/eleventy"
 
 export const config = {
     //static config
+    dir: {
+        input: "src",
+    },
     htmlTemplateEngine: "njk",
-    //templateFormats: ["html","njk","js","scss"],
+    templateFormats: ["html","njk","js","scss"],
 }
 
 /** @param {import('@11ty/eleventy/UserConfig').default} eleventyConfig */
@@ -18,7 +21,7 @@ export default async function(eleventyConfig) {
     eleventyConfig.addTemplateFormats('js')
     eleventyConfig.addTemplateFormats('scss')
 
-    eleventyConfig.addGlobalData("eleventyComputed.page.lang" () => {
+    eleventyConfig.addGlobalData("eleventyComputed.page.lang", () => {
         return (data) => {
             return data.lang
         }
