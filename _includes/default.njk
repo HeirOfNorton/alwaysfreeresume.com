@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ page.lang }}">
+<html lang="{{ lang }}">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,6 +17,6 @@
         <title>{% if title %}{{ title }} | {% endif %}{{ site.title }}</title>
     </head>
     <body>
-        {{ content }}
+        {{ content | safe }}
     </body>
 </html>

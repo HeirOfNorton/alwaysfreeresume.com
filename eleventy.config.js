@@ -2,7 +2,7 @@ import path from "node:path"
 import YAML from "yaml"
 import * as esbuild from "esbuild"
 import * as sass from "sass"
-import { I18nPlugin, RenderPlugin } from "@11ty/eleventy"
+import { RenderPlugin } from "@11ty/eleventy"
 
 export const config = {
     //static config
@@ -13,7 +13,6 @@ export const config = {
 /** @param {import('@11ty/eleventy/UserConfig').default} eleventyConfig */
 export default async function(eleventyConfig) {
     //config
-    eleventyConfig.addPlugin(I18nPlugin)
     eleventyConfig.addPlugin(RenderPlugin)
     eleventyConfig.addDataExtension("yaml", (contents) => YAML.parse(contents))
     eleventyConfig.addTemplateFormats('js')
