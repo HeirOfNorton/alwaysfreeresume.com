@@ -38,6 +38,11 @@ export default async function(eleventyConfig) {
     eleventyConfig.addExtension('js', {
         outputFileExtension: 'js',
         compile: async (inputContent, inputPath) => {
+            let parsed = path.parse(inputPath)
+
+            if(parsed.name.startsWith("_")) {
+                return;
+            }
             
             return async () => {
                 let output = await esbuild.build({
