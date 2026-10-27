@@ -34,18 +34,56 @@ export const BlankResume = {
         items: []
     },
     extras: {
-        volunteerexperience: {},
-        leadershipexperience: {},
-        projects: {},
-        awards: {},
-        certificates: {},
-        additionalskills: {},
-        publications: {},
-        references: {},
+        volunteer: {
+            title: "",
+            items: []
+        },
+        leadership: {
+            title: "",
+            items: []
+        },
+        projects: {
+            title: "",
+            items: []
+        },
+        awards: {
+            title: "",
+            items: []
+        },
+        certificates: {
+            title: "",
+            items: []
+        },
+        interests: {
+            title: "",
+            categorize: false,
+            items: []
+        },
+        references: {
+            title: "",
+            items: []
+        },
     },
     type: "",
     template: "",
     order: []
+}
+
+export const BlankBasics = {
+    name: "",
+    phone: "",
+    email: "",
+    website: "",
+    socials: "",
+    image: null,
+    include_address: false,
+    address: {
+        line1: "",
+        line2: "",
+        city: "",
+        state: "",
+        postalcode: ""
+    }
 }
 
 export const BlankExperience = {
@@ -77,3 +115,18 @@ export const BlankSkills = {
     text: ""
 }
 
+export const BlankProject = {
+    title: "",
+    organization: "",
+    date: "",
+    description: ""
+}
+
+export const BlankReference = {
+    name: "",
+    title: "",
+    organization: "",
+    email: "",
+    phone: "",
+    relationship: ""
+}
