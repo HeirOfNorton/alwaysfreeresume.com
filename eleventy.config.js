@@ -1,4 +1,5 @@
 import path from "node:path"
+import crypto from 'node:crypto'
 import YAML from "yaml"
 import * as esbuild from "esbuild"
 import * as sass from "sass"
@@ -21,6 +22,15 @@ export default async function(eleventyConfig) {
     eleventyConfig.addTemplateFormats('js')
     eleventyConfig.addTemplateFormats('scss')
 
+    eleventyConfig.addGlobalData("eleventyComputed.page.hash", () => {
+        return (data) => {
+            if (data.page.templateSyntax === "js" || data.page.templateSyntax === "scss") {
+                const hasher = crypto.createHash("sha1")
+                hash.update(data.page.rawInput)
+                return hash.digest("hex")
+            }
+        }
+    })
     eleventyConfig.addGlobalData("eleventyComputed.page.lang", () => {
         return (data) => {
             return data.lang
