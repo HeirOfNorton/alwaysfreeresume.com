@@ -14,7 +14,9 @@ export const config = {
     templateFormats: ["html","njk","js","scss"],
 }
 
+/* for hashing
 const hashFormats = ['js', 'scss']
+*/
 
 /** @param {import('@11ty/eleventy/UserConfig').default} eleventyConfig */
 export default async function(eleventyConfig) {
@@ -24,6 +26,7 @@ export default async function(eleventyConfig) {
     eleventyConfig.addTemplateFormats('js')
     eleventyConfig.addTemplateFormats('scss')
 
+/* for hashing, later
     eleventyConfig.addGlobalData("eleventyComputed.page.hash", () => {
         return (data) => {
             if (hashFormats.includes(data.page.templateSyntax)) {
@@ -33,6 +36,8 @@ export default async function(eleventyConfig) {
             }
         }
     })
+*/
+
     eleventyConfig.addGlobalData("eleventyComputed.page.lang", () => {
         return (data) => {
             return data.lang
