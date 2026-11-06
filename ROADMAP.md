@@ -1,7 +1,10 @@
 # Overall TODO list, not necessarily in order
 
-Update each page sectino with more detail as tasks come up.
+Update each page section with more detail as tasks come up.
 
+* UI preferences loading and saving
+* Github Actions workflow
+* A/B testing of different ways to accomplish certain form fields
 * Header and Footer
     * Skeleton structure
     * Style classes and alpine reactivity
@@ -95,6 +98,31 @@ Update each page sectino with more detail as tasks come up.
     * Text (english)
     * Test all functionality and finalize
 * Print Preview
+    * Skeleton structure
+    * Style classes and alpine reactivity
+    * Text (english)
+    * Test all functionality and finalize
+* ABout page
+    * Skeleton structure
+    * Style classes and alpine reactivity
+    * Text (english)
+    * Test all functionality and finalize
+* Copyright page
+    * Skeleton structure
+    * Style classes and alpine reactivity
+    * Text (english)
+    * Test all functionality and finalize
+* Privacy page
+    * Skeleton structure
+    * Style classes and alpine reactivity
+    * Text (english)
+    * Test all functionality and finalize
+* License page
+    * Skeleton structure
+    * Style classes and alpine reactivity
+    * Text (english)
+    * Test all functionality and finalize
+* Contact Us page
     * Skeleton structure
     * Style classes and alpine reactivity
     * Text (english)
